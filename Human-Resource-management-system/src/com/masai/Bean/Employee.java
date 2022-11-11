@@ -1,50 +1,102 @@
 package com.masai.Bean;
 
 public class Employee {
-	private int EmplId;
-	private String EmpName;
-	private String UserName;
+	private int Eid;
+	private String EmplName;
+	private String EmplUserName;
 	private String Password;
+	private int Edid;
+	
 	public Employee() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-	public Employee(int emplId, String empName, String userName, String password) {
-		super();
-		EmplId = emplId;
-		EmpName = empName;
-		UserName = userName;
+	
+	
+	
+	public Employee(int eid, String ename, String username, String password, int edid) {
+		
+		Eid = eid;
+		EmplName = ename;
+		EmplUserName = username;
 		Password = password;
+		Edid = edid;
 	}
-	public int getEmplId() {
-		return EmplId;
+
+
+
+	public int getEid() {
+		return Eid;
 	}
-	public void setEmplId(int emplId) {
-		EmplId = emplId;
+
+
+
+	public void setEid(int eid) {
+		Eid = eid;
 	}
-	public String getEmpName() {
-		return EmpName;
+
+
+
+	public String getEmplName() {
+		return EmplName;
 	}
-	public void setEmpName(String empName) {
-		EmpName = empName;
+
+
+
+	public void setEmplName(String ename) {
+		EmplName = ename;
 	}
-	public String getUserName() {
-		return UserName;
+
+
+
+	public String getUsername() {
+		return EmplUserName;
 	}
-	public void setUserName(String userName) {
-		UserName = userName;
+
+
+
+	public void setUsername(String username) {
+		EmplUserName = username;
 	}
+
+
+
 	public String getPassword() {
 		return Password;
 	}
+
+
+
 	public void setPassword(String password) {
 		Password = password;
 	}
+
+
+
+	public int getEdid() {
+		return Edid;
+	}
+
+
+
+	public void setEdid(int edid) {
+		Edid = edid;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "Employee [EmplId=" + EmplId + ", EmpName=" + EmpName + ", UserName=" + UserName + ", Password="
-				+ Password + "]";
+		return "Employee [Eid=" + Eid + ", EmplName=" + EmplName + ", EmplUserName=" + EmplUserName + ", Password=" + Password
+				+ ", Edid=" + Edid + "]";
 	}
+
+
+
+
+
+	
+	
+	
 	
 
 }
