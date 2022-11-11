@@ -1,10 +1,19 @@
 package com.masai.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.masai.Exception.EmployeeException;
+import com.masai.Exception.DepartmentException;
 import com.masai.Bean.Department;
+import com.masai.Bean.Employee;
 import com.masai.utility.DBUtil;
-public class DepartmentDaoImp implements DepartmentDao{
+
+public class DepartmentDaoImpl implements DepartmentDao {
+
 	@Override
 	public String registerDepartment(Department Department) {
 		
@@ -34,7 +43,43 @@ public class DepartmentDaoImp implements DepartmentDao{
 			return message;
 	}
 
+	@Override
+	public List<Department> allDepartment() throws DepartmentException {
+		
+		
+		List<Department> departments= new ArrayList<>();
+		
+		try(Connection conn= DBUtil.provideConnection()) {
+			
+			PreparedStatement ps= conn.prepareStatement("select * from department");
+			
+			ResultSet rs= ps.executeQuery();
+			
+			while(rs.next()) {
+				
+				
+				String DeptName= rs.getString("DeptName");
+				int DeptNo = rs.getInt("DeptNo");
+				int Did=rs.getInt("Did");
+				
+				Department department= new Department(DeptName, DeptNo,Did) ;
 
+				departments.add(department);
+				
+			}
+			
+		}catch (SQLException e) {
+		throw new DepartmentException();
+		
+		}
+		if(departments.size()==0) 
+			throw new DepartmentException("No Department Found ! .. ");
+		
+		
+		
+		
+		return departments;
+	}
 
 	@Override
 	public String updateDepartment(Department department) {
@@ -44,7 +89,7 @@ public class DepartmentDaoImp implements DepartmentDao{
 		
 		try(Connection conn= DBUtil.provideConnection()) {
 			
-			PreparedStatement ps=conn.prepareStatement("update department set Dname=? where DNO=?");
+			PreparedStatement ps=conn.prepareStatement("update department set DeptName=? where DNO=?");
 			ps.setString(1, department.getDeptName());
 			ps.setInt(2, department.getDeptNo());
 			
@@ -62,5 +107,7 @@ public class DepartmentDaoImp implements DepartmentDao{
 		
 		return message;
 	}
+	
+	
 
 }

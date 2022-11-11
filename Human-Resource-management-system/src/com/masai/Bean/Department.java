@@ -3,32 +3,47 @@ package com.masai.Bean;
 public class Department {
 	private String DeptName;
 	private int DeptNo;
-	public Department() {
-		super();
-		// TODO Auto-generated constructor stub
+
+	
+	public Department(){
+		
 	}
-	public Department(String deptName, int deptNo) {
-		super();
-		DeptName = deptName;
-		DeptNo = deptNo;
+	
+	public Department(String dname, int dNO, int did) {
+		DeptName = dname;
+		DeptNo = dNO;
+
 	}
+
+
 	public String getDeptName() {
 		return DeptName;
 	}
-	public void setDeptName(String deptName) {
-		DeptName = deptName;
+
+
+	public void setDeptName(String dname) {
+		DeptName = dname;
 	}
+
+
 	public int getDeptNo() {
 		return DeptNo;
 	}
-	public void setDeptNo(int deptNo) {
-		DeptNo = deptNo;
+
+
+	public void setDeptNo(int dNO) {
+		DeptNo = dNO;
 	}
+
 	@Override
 	public String toString() {
 		return "Department [DeptName=" + DeptName + ", DeptNo=" + DeptNo + "]";
 	}
 
+
+	
+	
+	
 	
 
 }
