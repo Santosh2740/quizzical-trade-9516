@@ -2,6 +2,7 @@ package com.masai.Bean;
 
 public class Employee {
 	private int EmplId;
+	private int Edid;
 	private String EmpName;
 	private String UserName;
 	private String Password;
@@ -9,9 +10,10 @@ public class Employee {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Employee(int emplId, String empName, String userName, String password) {
+	public Employee(int emplId, int edid, String empName, String userName, String password) {
 		super();
 		EmplId = emplId;
+		Edid = edid;
 		EmpName = empName;
 		UserName = userName;
 		Password = password;
@@ -21,6 +23,12 @@ public class Employee {
 	}
 	public void setEmplId(int emplId) {
 		EmplId = emplId;
+	}
+	public int getEdid() {
+		return Edid;
+	}
+	public void setEdid(int edid) {
+		Edid = edid;
 	}
 	public String getEmpName() {
 		return EmpName;
@@ -42,9 +50,9 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [EmplId=" + EmplId + ", EmpName=" + EmpName + ", UserName=" + UserName + ", Password="
-				+ Password + "]";
+		return "Employee [EmplId=" + EmplId + ", Edid=" + Edid + ", EmpName=" + EmpName + ", UserName=" + UserName
+				+ ", Password=" + Password + "]";
 	}
 	
-
+	
 }

@@ -45,7 +45,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			ps.setString(1, employee.getEmpName());
 			ps.setString(2, employee.getUserName());
 			ps.setString(3, employee.getPassword());
-			ps.setInt(4, employee.getEmplId());
+			ps.setInt(4, employee.getEdid());
 		
 			
 			int x=ps.executeUpdate();
