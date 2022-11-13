@@ -1,5 +1,6 @@
 package com.masai.Application;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.masai.usecases.applyForLeaveUsecase;
@@ -11,7 +12,7 @@ public class employeeLink {
 	
 	 static boolean	ordering=true;
 	
-	public  static void linkingEmployeeMethod() {
+	public  static void linkingEmployeeMethod() throws SQLException {
 		
 		Scanner sc = new Scanner(System.in);
 		do {

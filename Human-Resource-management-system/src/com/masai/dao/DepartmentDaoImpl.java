@@ -44,7 +44,7 @@ public class DepartmentDaoImpl implements DepartmentDao {
 	}
 
 	@Override
-	public List<Department> allDepartment() throws DepartmentException {
+	public List<Department> allDepartment() throws DepartmentException,SQLException {
 		
 		
 		List<Department> departments= new ArrayList<>();

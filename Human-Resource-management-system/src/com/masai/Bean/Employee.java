@@ -1,10 +1,10 @@
 package com.masai.Bean;
 
 public class Employee {
-	private int Eid;
+	private int EmplId;
 	private String EmplName;
 	private String EmplUserName;
-	private String Password;
+	private String EmplPassword;
 	private int Edid;
 	
 	public Employee() {
@@ -13,25 +13,25 @@ public class Employee {
 	
 	
 	
-	public Employee(int eid, String ename, String username, String password, int edid) {
+	public Employee(int eid, String ename, String username, String EmplPassword, int edid) {
 		
-		Eid = eid;
+		EmplId = eid;
 		EmplName = ename;
 		EmplUserName = username;
-		Password = password;
+		EmplPassword = EmplPassword;
 		Edid = edid;
 	}
 
 
 
-	public int getEid() {
-		return Eid;
+	public int getEmplId() {
+		return EmplId;
 	}
 
 
 
-	public void setEid(int eid) {
-		Eid = eid;
+	public void setEmplId(int eid) {
+		EmplId = eid;
 	}
 
 
@@ -48,26 +48,26 @@ public class Employee {
 
 
 
-	public String getUsername() {
+	public String getEmplUserName() {
 		return EmplUserName;
 	}
 
 
 
-	public void setUsername(String username) {
+	public void setEmplUserName(String username) {
 		EmplUserName = username;
 	}
 
 
 
-	public String getPassword() {
-		return Password;
+	public String getEmplPassword() {
+		return EmplPassword;
 	}
 
 
 
-	public void setPassword(String password) {
-		Password = password;
+	public void setEmplPassword(String EmplPassword) {
+		EmplPassword = EmplPassword;
 	}
 
 
@@ -86,7 +86,7 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "Employee [Eid=" + Eid + ", EmplName=" + EmplName + ", EmplUserName=" + EmplUserName + ", Password=" + Password
+		return "Employee [EmplId=" + EmplId + ", EmplName=" + EmplName + ", EmplUserName=" + EmplUserName + ", EmplPassword=" + EmplPassword
 				+ ", Edid=" + Edid + "]";
 	}
 
