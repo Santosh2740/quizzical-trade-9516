@@ -1,6 +1,7 @@
 package com.masai.usecases;
 
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 
@@ -15,29 +16,9 @@ public class loginEmployee {
 	public static void main(String[] args) {
 		
 		
-//		Scanner sc =new Scanner(System.in);
-//		
-//		System.out.println("Enter Username : ");
-//		String username=sc.next();
-//		
-//		System.out.println("Enter password : ");
-//		String pass = sc.next();
-//		
-//		EmployeeDao dao=new EmployeeDaoImpl();
-//		
-//		
-//		try {
-//			Employee employee = dao.loginEmployee(username, pass) ;
-//			System.out.println("Welcome Employee : "+employee.getEname());
-//					
-//		} catch (EmployeeException e) {
-//			System.out.println(e.getMessage());
-//		}
-		
 	}
 	
-	
-	public static void loginEmployee() {
+	public loginEmployee() throws SQLException {
 		
 
 		Scanner sc =new Scanner(System.in);
@@ -53,12 +34,17 @@ public class loginEmployee {
 		
 		try {
 			Employee employee = dao.loginEmployee(username, pass) ;
-			System.out.println("Welcome Employee : "+employee.getEname());
+			System.out.println("Welcome Employee : "+employee.getEmplName());
 			employeeLink.linkingEmployeeMethod();
 					
 		} catch (EmployeeException e) {
 			System.out.println(e.getMessage());
 		}
+	}
+
+	public static void loginEmployee() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

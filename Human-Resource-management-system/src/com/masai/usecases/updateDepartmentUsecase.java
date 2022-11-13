@@ -10,25 +10,25 @@ import com.masai.dao.DepartmentDaoImpl;
 public class updateDepartmentUsecase {
 	
 	public static void main(String[] args) {
-//		
-//		Scanner sc = new Scanner(System.in);
-//		
-//		System.out.println("Enter Department Name : ");
-//		String dname=sc.next();
-//		
-//		System.out.println("Enter Department DId : ");
-//		int did=sc.nextInt();
-//		
-//		DepartmentDao dao=new DepartmentDaoImpl();
-//		
-//		Department department = new Department();
-//		
-//		department.setDname(dname);
-//		department.setDNO(did);
-//		
-//		String result = dao.updateDepartment(department);
-//		
-//		System.out.println(result);
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Department Name : ");
+		String dname=sc.next();
+		
+		System.out.println("Enter Department DId : ");
+		int did=sc.nextInt();
+		
+		DepartmentDao dao=new DepartmentDaoImpl();
+		
+		Department department = new Department();
+		
+		department.setDeptName(dname);
+		department.setDeptNo(did);
+		
+		String result = dao.updateDepartment(department);
+		
+		System.out.println(result);
 	}
 	
 	
@@ -46,8 +46,8 @@ public class updateDepartmentUsecase {
 		
 		Department department = new Department();
 		
-		department.setDname(dname);
-		department.setDNO(did);
+		department.setDeptName(dname);
+		department.setDeptNo(did);
 		
 		String result = dao.updateDepartment(department);
 		

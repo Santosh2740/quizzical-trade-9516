@@ -11,16 +11,16 @@ public class RejectLeavesUsecase {
 	
 	public static void main(String[] args) {
 		
-//		Scanner sc = new Scanner(System.in);
-//		
-//		System.out.println("Enter Employee Id  : ");
-//		int empid=sc.nextInt();
-//		
-//		EmployeeDao dao = new EmployeeDaoImpl();
-//		
-//		String result = dao.rejectLeaves(empid);
-//		
-//		System.out.println(result);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Employee Id  : ");
+		int empid=sc.nextInt();
+		
+		EmployeeDao dao = new EmployeeDaoImpl();
+		
+		String result = dao.rejectLeaves(empid);
+		
+		System.out.println(result);
 }
 	
 	public static void rejectLeaves() {

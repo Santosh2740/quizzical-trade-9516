@@ -1,5 +1,6 @@
 package com.masai.usecases;
 
+import java.sql.SQLException;
 import java.util.List;
 
 
@@ -10,7 +11,7 @@ import com.masai.dao.EmployeeDaoImpl;
 
 public class getAllEmployeeUsecase {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		
 		
 		EmployeeDao dao = new EmployeeDaoImpl();
@@ -20,9 +21,9 @@ public class getAllEmployeeUsecase {
 		List<Employee> emp	=dao.allEmployeeDetails();
 		
 		emp.forEach(e->{
-			System.out.println("Employee Id is : "+ e.getEid());
+			System.out.println("Employee Id is : "+ e.getEmplId());
 			System.out.println("Employe name is : "+e.getEmplName());
-			System.out.println("Employee username is : "+e.getUsername());
+			System.out.println("Employee username is : "+e.getEmplUserName());
 			System.out.println("Employee Department Id is "+e.getEdid());
 			
 			System.out.println("=====================================");

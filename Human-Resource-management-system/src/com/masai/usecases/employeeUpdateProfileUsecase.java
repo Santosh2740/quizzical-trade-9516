@@ -12,33 +12,33 @@ public class employeeUpdateProfileUsecase {
 		
 		
 
-//		Scanner sc = new Scanner(System.in);
-//		
-//		System.out.println("Enter New Name : ");
-//		String Ename=sc.next();
-//		
-//		System.out.println("Enter New Username  : ");
-//		String EmplUserName=sc.next();
-//		
-//		System.out.println("Enter New Password  : ");
-//		String pass=sc.next();
-//		
-//		
-//		System.out.println("Enter Employee Id  : ");
-//		int eid=sc.nextInt();
-//		
-//		EmployeeDao dao=new EmployeeDaoImpl();
-//		
-//		Employee employee = new Employee();
-//		
-//		employee.setEname(Ename);
-//		employee.setUsername(EmplUserName);
-//		employee.setPassword(pass);
-//		employee.setEid(eid);
-//		
-//		String result = dao.updateEmployee(employee, eid);
-//	
-//		System.out.println(result);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter New Name : ");
+		String Ename=sc.next();
+		
+		System.out.println("Enter New Username  : ");
+		String EmplUserName=sc.next();
+		
+		System.out.println("Enter New Password  : ");
+		String pass=sc.next();
+		
+		
+		System.out.println("Enter Employee Id  : ");
+		int eid=sc.nextInt();
+		
+		EmployeeDao dao=new EmployeeDaoImpl();
+		
+		Employee employee = new Employee();
+		
+		employee.setEmplName(Ename);
+		employee.setEmplUserName(EmplUserName);
+		employee.setEmplPassword(pass);
+		employee.setEdid(eid);
+		
+		String result = dao.updateEmployee(employee, eid);
+	
+		System.out.println(result);
 	}
 	
 	public static void updateProfile() {
@@ -64,8 +64,8 @@ public class employeeUpdateProfileUsecase {
 		
 		employee.setEmplName(Ename);
 		employee.setEmplUserName(EmplUserName);
-		employee.setPassword(pass);
-		employee.setEid(eid);
+		employee.setEmplPassword(pass);
+		employee.setEmplId(eid);
 		
 		String result = dao.updateEmployee(employee, eid);
 	

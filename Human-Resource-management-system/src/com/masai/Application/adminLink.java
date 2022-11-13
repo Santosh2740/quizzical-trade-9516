@@ -1,5 +1,6 @@
 package com.masai.Application;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 import com.masai.usecases.RegisterDepartmentUsecase;
 import com.masai.usecases.RegisterEmployeeUsecase;
@@ -12,11 +13,11 @@ import com.masai.usecases.updateDepartmentUsecase;
 public class adminLink {
 
   static boolean	ordering=true;
-	public  static void linkingAdmin() {
+	public  static void linkingAdmin() throws SQLException {
 		
 		Scanner sc=new Scanner(System.in);
 		do {
-		System.out.println("Hellow Welcome Admin :-> Falgun");
+		System.out.println("Hellow Welcome Admin :-> Santosh Kumar");
 		System.out.println();
 		System.out.println();
 		

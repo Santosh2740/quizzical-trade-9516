@@ -1,12 +1,13 @@
 package com.masai.Application;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 import com.masai.usecases.loginEmployee;
 
 public class Main {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		                   
 		Scanner sc= new Scanner(System.in);
 		

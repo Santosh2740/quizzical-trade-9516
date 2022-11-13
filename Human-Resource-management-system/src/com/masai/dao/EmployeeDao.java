@@ -1,6 +1,8 @@
 package com.masai.dao;
 
+import java.sql.SQLException;
 import java.util.List;
+
 
 import com.masai.Exception.EmployeeException;
 import com.masai.Bean.Employee;
@@ -9,11 +11,10 @@ public interface EmployeeDao {
 	
 	public String registerEmployee(Employee Employee);
 	
-	public Employee getEmployeeById(int Eid) throws EmployeeException;
-	
-    public Employee loginEmployee(String Username , String password) throws EmployeeException;
+	public Employee getEmployeeById(int Eid) throws EmployeeException, SQLException;	
+    public Employee loginEmployee(String Username , String password) throws EmployeeException,SQLException;
     
-    public List<Employee> allEmployeeDetails()throws EmployeeException;
+    public List<Employee> allEmployeeDetails()throws EmployeeException,SQLException;
     
     public String changePassword(int Eid, String Password);
     
