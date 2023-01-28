@@ -19,24 +19,25 @@ public class DepartmentDaoImpl implements DepartmentDao {
 		
 		String message ="Not Inserted..";
 		
-		
-		
 		try(Connection conn= DBUtil.provideConnection();) {
 			
 			PreparedStatement ps = conn.prepareStatement("insert into Department value(?,?)");
-			
 			
 			ps.setString(1, Department.getDeptName());
 			ps.setInt(2, Department.getDeptNo() );
 			
 			
 			int X= ps.executeUpdate();
-			
+
+			 // Here String message is used!!
+			 //Otherwise throw error
 			if(X>0)
 				message="Department Added  Sucessfully !";
 			
 			
 			} catch (SQLException e) {
+				// Here String message is used!!
+			 //Otherwise throw error
 				message=e.getMessage();
 			}
 			
